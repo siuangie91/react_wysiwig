@@ -16,6 +16,9 @@ const Toolbar = props => {
           );
         })
       }
+      <button onClick={() => {document.execCommand("foreColor", false, "#ff0000")}}>
+        <i className="fas fa-palette"></i>
+      </button>
     </div>
   );
 }

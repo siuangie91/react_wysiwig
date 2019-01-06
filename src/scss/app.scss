@@ -1,12 +1,36 @@
 @import './vars';
+@import './basics';
 
 html, body {
 	font: {
 		family: sans-serif;
 		size: 14px;
 	}
+	@extend %reset;
 }
 
-h1 {
-	color: $red;
+body {
+	background: $lightGrey;
+}
+
+#app {
+	@extend %reset;
+}
+
+.toolbar {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	padding: 10px;
+	background: black;
+}
+
+.editor {
+	width: 95%;
+	max-width: 700px;
+	min-height: 80vh;
+	margin: 20px auto 0 auto;
+	padding: 10px;
+	background: #fff;
+	box-shadow: 5px 5px 10px #999;
 }

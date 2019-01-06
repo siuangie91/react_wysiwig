@@ -1,10 +1,10 @@
 import React from 'react';
 
 const ToolBtn = props => {
-  const {action, btnText} = props;
+  const {action, btnSymbol} = props;
   return (
     <button onClick={() => {document.execCommand(action, false, '')}}>
-      {btnText}
+      <i className={`fas fa-${btnSymbol}`}></i>
     </button>
   );
 }

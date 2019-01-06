@@ -20,12 +20,20 @@ body {
 .toolbar {
 	display: flex;
 	flex-direction: row;
-	justify-content: center;
+	justify-content: space-evenly;
 	padding: 10px;
 	background: black;
+
+	button {
+		width: 34px;
+		height: 34px;
+		border-radius: 0;
+		cursor: pointer;
+	}
 }
 
 .editor {
+	position: relative;
 	width: 95%;
 	max-width: 700px;
 	min-height: 80vh;
@@ -33,4 +41,15 @@ body {
 	padding: 10px;
 	background: #fff;
 	box-shadow: 5px 5px 10px #999;
+	
+	&:before {
+		content: "Start typing here...";
+		display: inline;
+		position: absolute;
+		color: darken($lightGrey, 20%);
+	}
+
+	&:focus {
+		outline: none;
+	}
 }

@@ -2,12 +2,20 @@ import React from 'react';
 
 import ToolBtn from './ToolBtn';
 
+import {ToolbarConfig} from './../../helpers';
+
 const Toolbar = props => {
   return (
     <div className="toolbar">
-      <ToolBtn action="bold" btnSymbol="bold" />
-      <ToolBtn action="italic" btnSymbol="italic" />
-      <ToolBtn action="underline" btnSymbol="underline" />
+      {
+        Object.keys(ToolbarConfig).map((cmd, i) => {
+          return (
+            <ToolBtn key={i} 
+              action={cmd} 
+              btnSymbol={ToolbarConfig[cmd]}/>
+          );
+        })
+      }
     </div>
   );
 }

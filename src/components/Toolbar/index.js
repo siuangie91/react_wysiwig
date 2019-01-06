@@ -7,6 +7,7 @@ const Toolbar = props => {
     <div className="toolbar">
       <ToolBtn action="bold" btnText="B" />
       <ToolBtn action="italic" btnText="I" />
+      <ToolBtn action="underline" btnText="U" />
     </div>
   );
 }

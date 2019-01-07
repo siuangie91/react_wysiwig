@@ -39,11 +39,11 @@ If you'd like to run this project locally, clone the project and then
  1. `npm install`
  2. `npm start`
 
-I kept my console messages in there because I like to keep a record of what my thought process was. However, I have put all these messages behind a cookie that expires after 24 hours. If you'd like to see the messages, run
+I kept my console messages in there because I like to keep a record of what my thought process was. However, I have put all these messages behind a cookie that expires after 24 hours so that not everyone can see them (unless you're reading this, of course :wink:). If you'd like to see the messages, run
 ```javascript
 document.cookie="dev_console=true;"
 ```
-Then refresh the page. Open the console to see the messages! 
+in the console. Then refresh the page. Check the console again to see the messages! 
 
 Enhanced console logger is found in `src/helpers/index.js`:
 ```javascript

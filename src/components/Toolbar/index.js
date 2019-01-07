@@ -6,6 +6,13 @@ import Select from './Select';
 import { ToolbarConfig } from './../../helpers';
 
 const Toolbar = props => {
+  const getBtnType = (key) => {
+    if(typeof ToolbarConfig[key] === "object") {
+      return ToolbarConfig[key];
+    }
+    return "default-btn";
+  };
+
   return (
     <div className="toolbar">
       {
@@ -13,15 +20,11 @@ const Toolbar = props => {
           return (
             <ToolBtn key={i} 
               action={cmd} 
-              btnSymbol={ToolbarConfig[cmd]}/>
+              btnSymbol={ToolbarConfig[cmd]}
+              btnType={getBtnType(cmd)} />
           );
         })
       }
-      
-      <Select />
-      
-      {/* <button onClick={() => {document.execCommand("foreColor", false, "#ff0000")}}>
-      </button> */}
     </div>
   );
 }

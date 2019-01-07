@@ -18,21 +18,17 @@ export const ToolbarConfig = {
   "justifyRight": "align-right",
   "foreColor": {
     "type": "choiceSet",
+    "icon": "palette",
     "choiceType": "colors",
     "choices": ["#ff0000", "#00ff00", "#0000ff", "#ffff00", "#00ffff", "#ff00ff"]
   }
 };
 
-// make color picker a "dropdown" -- 
-// contain an array of hex colors
-// render each color as a btn
-// btn on click --> change color
-
 // document.cookie="dev_console=true; max-age=(60*60*24);"
 const dev_console = getCookie("dev_console");
 export function logMsg(...msgs) { // hide all console msgs behind a cookie
   if(dev_console) {
-    console.log(...msgs);
+    console.log("[DEV CONSOLE MSG]: ", ...msgs);
   }
 }
 

@@ -7,7 +7,7 @@ class Editor extends Component {
     super();
 
     this.state = {
-      hasContent: false
+      hasContent: false,
     }
   }
 

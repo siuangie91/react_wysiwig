@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import { logMsg } from './../../helpers';
+
 class Editor extends Component {
   constructor() {
     super();
@@ -10,7 +12,7 @@ class Editor extends Component {
   }
 
   handleInput = (editor) => {
-    console.log('hasChildNodes', editor.hasChildNodes());
+    logMsg('hasChildNodes', editor.hasChildNodes());
     if(editor.hasChildNodes()) {
       this.setState({ hasContent: true });
     }

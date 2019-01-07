@@ -1,7 +1,7 @@
 import React from 'react';
 
 import ToolBtn from './ToolBtn';
-import { ToolbarConfig } from './../../helpers';
+import { ToolbarConfig } from './../../config/ToolbarConfig';
 
 const Toolbar = props => {
   const getBtnType = (key) => {

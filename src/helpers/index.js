@@ -17,3 +17,8 @@ export const ToolbarConfig = {
   "justifyCenter": "align-center",
   "justifyRight": "align-right",
 };
+
+// make color picker a "dropdown" -- 
+// contain an array of hex colors
+// render each color as a btn
+// btn on click --> change color

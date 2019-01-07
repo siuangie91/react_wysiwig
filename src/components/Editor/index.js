@@ -8,17 +8,37 @@ class Editor extends Component {
 
     this.state = {
       hasContent: false,
+      numChildNodes: 0
     }
   }
 
   handleInput = (editor) => {
-    logMsg('hasChildNodes', editor.hasChildNodes());
-    if(editor.hasChildNodes()) {
-      this.setState({ hasContent: true });
-    }
-    else {
-      this.setState({ hasContent: false });
-    }
+    const newChildNodeLength = editor.childNodes.length;
+    this.setState(prevState => {
+      if(prevState.numChildNodes !== newChildNodeLength) {
+        logMsg('updated child node length', newChildNodeLength);
+        let hasContent = prevState.hasContent;
+
+        if(newChildNodeLength) {
+          if(this.state.hasContent) {
+            logMsg('leaving hasContent at true!');
+          }
+          else {
+            logMsg('setting hasContent to true!');
+            hasContent = true;
+          }
+        }
+        else {
+          logMsg('setting to false');
+          hasContent = false;
+        }
+        
+        return { 
+          numChildNodes: newChildNodeLength,
+          hasContent: hasContent
+        };
+      }
+    });
   }
 
   render() {

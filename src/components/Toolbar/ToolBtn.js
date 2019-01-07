@@ -13,6 +13,10 @@ class ToolBtn extends Component {
     }
   }
 
+  isObject = (thing) => {
+    return typeof thing === "object";
+  }
+
   styleText = (action, valueArg = "") => {
     document.execCommand(action, false, valueArg);
   }
@@ -39,7 +43,7 @@ class ToolBtn extends Component {
   }
 
   renderChoiceSet = (btnType) => {
-    if(typeof btnType === "object") {
+    if(this.isObject(btnType)) {
       const {choiceType, choices} = btnType;
       const hiddenClassName = this.state.showSelect ? "" : "hidden";
 
@@ -54,9 +58,7 @@ class ToolBtn extends Component {
 
   render() {
     const {action, btnType} = this.props;
-    const btnSymbol = (typeof btnType === "object") ? btnType.icon : this.props.btnSymbol;
-
-    logMsg(btnSymbol);
+    const btnSymbol = (this.isObject(btnType)) ? btnType.icon : this.props.btnSymbol;
 
     return (
       <button onClick={() => {

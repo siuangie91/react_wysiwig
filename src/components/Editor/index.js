@@ -13,7 +13,6 @@ class Editor extends Component {
   }
 
   handleInput = (editor) => {
-    logMsg('this.state', this.state);
     const newChildNodeLength = editor.childNodes.length;
     this.setState(prevState => {
       if(prevState.numChildNodes === 0) {

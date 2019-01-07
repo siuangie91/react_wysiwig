@@ -4,7 +4,7 @@ REFERENCES:
 - Font Awesome classes: https://fontawesome.com/icons?d=gallery
 */
 
-export const ToolbarConfig = {
+const ToolbarConfig = {
   // "commandName": "font-awesome-class"
   "undo": "undo",
   "redo": "redo" ,
@@ -23,3 +23,5 @@ export const ToolbarConfig = {
     "choices": ["#ff0000", "#00ff00", "#0000ff", "#ffff00", "#00ffff", "#ff00ff"]
   }
 };
+
+export default ToolbarConfig;

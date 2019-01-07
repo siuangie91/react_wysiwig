@@ -23,13 +23,13 @@ class Editor extends Component {
           hasContent: true
         }
       }
-      else if(prevState.numChildNodes < newChildNodeLength) {
+      else if(prevState.numChildNodes > 0 && prevState.numChildNodes < newChildNodeLength) {
         logMsg('more nodes now => no need to update hasContent');
       }
       else if(newChildNodeLength === 0) {
         logMsg('empty editor => set hasContent to false');
         return {
-          numChildNodes: newChildNodeLength,
+          numChildNodes: 0,
           hasContent: false
         }
       }

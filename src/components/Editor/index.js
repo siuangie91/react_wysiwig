@@ -9,14 +9,23 @@ class Editor extends Component {
     }
   }
 
-  handleInput = () => {
-    console.log('detected input');
+  handleInput = (editor) => {
+    console.log('hasChildNodes', editor.hasChildNodes());
+    if(editor.hasChildNodes()) {
+      this.setState({ hasContent: true });
+    }
+    else {
+      this.setState({ hasContent: false });
+    }
   }
 
   render() {
+    const isEmptyClassName = this.state.hasContent ? "" : "isEmpty";
     return (
-      <div className="editor" contentEditable="true"
-        onInput={}></div>
+      <div className={`editor ${isEmptyClassName}`} contentEditable="true"
+        onInput={e => {
+          this.handleInput(e.target);
+        }}></div>
     );
   }
 }

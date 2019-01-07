@@ -47,7 +47,7 @@ body {
 	background: #fff;
 	box-shadow: 5px 5px 10px #999;
 	
-	&:before {
+	&.isEmpty:before {
 		content: "Start typing here...";
 		display: inline;
 		position: absolute;

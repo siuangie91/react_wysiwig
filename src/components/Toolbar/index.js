@@ -1,8 +1,6 @@
 import React from 'react';
 
 import ToolBtn from './ToolBtn';
-import Select from './Select';
-
 import { ToolbarConfig } from './../../helpers';
 
 const Toolbar = props => {

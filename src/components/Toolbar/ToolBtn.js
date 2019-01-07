@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 import { logMsg } from './../../helpers';
 
+import ColorSet from './ColorSet';
+
 class ToolBtn extends Component {
   constructor() {
     super();
@@ -25,19 +27,8 @@ class ToolBtn extends Component {
 
   renderColors = (colors) => {
     return (
-      <ul>
-        {
-          colors.map((color, i) => {
-            return (
-              <li key={i} style={{backgroundColor: `${color}`}}
-                onClick={() => {
-                  document.execCommand("foreColor", false, color);
-                }}>
-                &nbsp;</li>
-            );
-          })
-        }
-      </ul>
+      <ColorSet colors={colors}
+        cmdHandler={this.styleText} />
     );
   }
 
@@ -64,6 +55,8 @@ class ToolBtn extends Component {
   render() {
     const {action, btnType} = this.props;
     const btnSymbol = (typeof btnType === "object") ? btnType.icon : this.props.btnSymbol;
+
+    logMsg(btnSymbol);
 
     return (
       <button onClick={() => {

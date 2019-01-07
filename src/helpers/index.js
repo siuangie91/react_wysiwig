@@ -16,6 +16,10 @@ export const ToolbarConfig = {
   "justifyLeft": "align-left",
   "justifyCenter": "align-center",
   "justifyRight": "align-right",
+  "foreColor": {
+    "type": "choiceSet",
+    "choices": ["#ff0000", "#00ff00", "#0000ff", "#ffff00", "#00ffff", "#ff00ff"]
+  }
 };
 
 // make color picker a "dropdown" -- 

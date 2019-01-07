@@ -1,8 +1,9 @@
 import React from 'react';
 
 import ToolBtn from './ToolBtn';
+import Select from './Select';
 
-import {ToolbarConfig} from './../../helpers';
+import { ToolbarConfig } from './../../helpers';
 
 const Toolbar = props => {
   return (
@@ -16,9 +17,11 @@ const Toolbar = props => {
           );
         })
       }
-      <button onClick={() => {document.execCommand("foreColor", false, "#ff0000")}}>
-        <i className="fas fa-palette"></i>
-      </button>
+      
+      <Select />
+      
+      {/* <button onClick={() => {document.execCommand("foreColor", false, "#ff0000")}}>
+      </button> */}
     </div>
   );
 }

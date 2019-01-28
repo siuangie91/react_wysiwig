@@ -20,7 +20,7 @@ const ToolbarConfig = {
     "type": "choiceSet",
     "icon": "palette",
     "choiceType": "colors",
-    "choices": ["#ff0000", "#00ff00", "#0000ff", "#ffff00", "#00ffff", "#ff00ff"]
+    "choices": ["#000000", "#ff0000", "#00ff00", "#0000ff", "#ffff00", "#00ffff", "#ff00ff"]
   }
 };
 

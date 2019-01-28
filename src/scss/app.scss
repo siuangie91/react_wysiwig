@@ -17,33 +17,52 @@ body {
 
 #app {
 	@extend %reset;
-	height: 100%;
+	min-height: 100%;
 	padding-bottom: 20px;
 }
 
 .toolbar {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-evenly;
 	padding: 10px;
-	background: black;
+	background: black;	
+	overflow-x: auto;
+	white-space: nowrap;
+
+	@media screen and (min-width: 768px) {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-evenly;
+		overflow-x: initial;
+	}
 
 	button {
 		position: relative;
-		width: 34px;
-		height: 34px;
+		width: 44px;
+		height: 44px;
 		border-radius: 0;
+		background: #efefef;
 		cursor: pointer;
+
+		@media screen and (min-width: 768px) {
+			width: 34px;
+			height: 34px;
+		}
 
 		div {
 			position: absolute;
-			top: calc(100% + 5px);
-			right: 0;
 			background: #fff;
 			border: 1px solid black;
 			z-index: 2;
-
+			
 			&.choice-set {
+				position: fixed;
+				top: 55px;
+				right: 0;
+
+				@media screen and (min-width: 768px) {
+					position: absolute;
+					top: calc(100% + 5px);
+				}
+				
 				&.hidden {
 					@extend %hidden;
 				}
@@ -58,9 +77,14 @@ body {
 
 					li {
 						display: inline-block;
-						width: 20px;
-						height: 20px;
+						width: 40px;
+						height: 40px;
 						margin: 0 3px;
+
+						@media screen and (min-width: 768px) {
+							width: 20px;
+							height: 20px;
+						}
 					}
 				}
 			}
@@ -73,7 +97,7 @@ body {
 	width: 90%;
 	max-width: 700px;
 	height: auto;
-	min-height: calc(100% - 100px);
+	min-height: calc(80vh - 100px);
 	margin: 20px auto 0 auto;
 	padding: 10px;
 	background: #fff;

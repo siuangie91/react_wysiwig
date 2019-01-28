@@ -1,5 +1,7 @@
 # Simple WYSIWIG built on React
 
+**Demo:** [http://projects.angiesiudevworks.com/reactwysiwig/](http://projects.angiesiudevworks.com/reactwysiwig/)
+
 ### Overview
 Basic WYSIWIG editor. The main idea is that you can customize the toolbar to your liking using a config file. Config file is designed to be flexible enough to take
 * simple commands, like `bold` and `italic`, and

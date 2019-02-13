@@ -2,6 +2,10 @@
 
 **Demo:** [http://projects.angiesiudevworks.com/reactwysiwig/](http://projects.angiesiudevworks.com/reactwysiwig/)
 
+#### To-do:
+* `position: fixed` for the toolbar
+* show HTML "code-behind"
+
 ### Overview
 Basic WYSIWIG editor. The main idea is that you can customize the toolbar to your liking using a config file. Config file is designed to be flexible enough to take
 * simple commands, like `bold` and `italic`, and
